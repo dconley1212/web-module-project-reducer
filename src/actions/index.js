@@ -4,6 +4,7 @@ export const APPLY_NUMBER = "APPLY_NUMBER";
 export const CHANGE_OPERATION = "CHANGE_OPERATION";
 export const CLEAR_DISPLAY = "CLEAR_DISPLAY";
 export const MEMORY_OF_TOTAL = "MEMORY_OF_TOTAL";
+export const MEMORY_AND_TOTAL = "MEMORY_AND_TOTAL";
 
 export const addOne = () => {
   return { type: ADD_ONE };
@@ -23,4 +24,8 @@ export const clearDisplay = () => {
 
 export const memoryOfTotal = () => {
   return { type: MEMORY_OF_TOTAL };
+};
+
+export const memoryAndTotal = () => {
+  return { type: MEMORY_AND_TOTAL };
 };

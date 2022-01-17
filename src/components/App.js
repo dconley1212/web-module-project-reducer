@@ -10,6 +10,7 @@ import {
   changeOperation,
   clearDisplay,
   memoryOfTotal,
+  memoryAndTotal,
 } from "../actions";
 
 function App() {
@@ -29,6 +30,10 @@ function App() {
 
   const handleMemoryOfTotal = () => {
     dispatch(memoryOfTotal());
+  };
+
+  const handleMemoryAndTotal = () => {
+    dispatch(memoryAndTotal());
   };
 
   return (
@@ -55,7 +60,7 @@ function App() {
 
             <div className="row">
               <CalcButton value={"M+"} onClick={() => handleMemoryOfTotal()} />
-              <CalcButton value={"MR"} />
+              <CalcButton value={"MR"} onClick={() => handleMemoryAndTotal()} />
               <CalcButton value={"MC"} />
             </div>
 

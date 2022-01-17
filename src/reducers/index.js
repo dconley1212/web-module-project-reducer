@@ -4,6 +4,7 @@ import {
   CHANGE_OPERATION,
   CLEAR_DISPLAY,
   MEMORY_OF_TOTAL,
+  MEMORY_AND_TOTAL,
 } from "./../actions";
 
 export const initialState = {
@@ -21,6 +22,10 @@ const calculateResult = (num1, num2, operation) => {
     case "-":
       return num1 - num2;
   }
+};
+
+const calculateMemoryAndTotal = (num1, num2) => {
+  return num1 + num2;
 };
 
 const reducer = (state, action) => {
@@ -53,6 +58,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         memory: state.total,
+      };
+
+    case MEMORY_AND_TOTAL:
+      return {
+        ...state,
+        total: calculateMemoryAndTotal(state.total, state.memory),
       };
 
     default:
